@@ -13,6 +13,6 @@ class MainKtTest {
 
         val result = feeCalculation(amount, paymentSystem, transfersPerMonth)
 
-        assertEquals(0u, result)
+        assertEquals("Ошибочное значение", result)
     }
 }
