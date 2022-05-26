@@ -2,7 +2,7 @@ import PaymentSystem.*
 import kotlin.math.ceil
 import kotlin.math.max
 
-fun main() {
+fun main() {    
 
 }
 
