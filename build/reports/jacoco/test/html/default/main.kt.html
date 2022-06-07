@@ -4,23 +4,24 @@ import kotlin.math.max
 
 fun main() {
 
-<span class="nc" id="L7">}</span>
 
-<span class="nc" id="L9">fun feeCalculation(</span>
+<span class="nc" id="L8">}</span>
+
+<span class="nc" id="L10">fun feeCalculation(</span>
     amount: UInt,
-<span class="nc" id="L11">    paymentSystem: PaymentSystem = VK_PAY,</span>
-<span class="nc" id="L12">    transfersPerMonth: UInt = 0u</span>
+<span class="nc" id="L12">    paymentSystem: PaymentSystem = VK_PAY,</span>
+<span class="nc" id="L13">    transfersPerMonth: UInt = 0u</span>
 ): UInt {
-<span class="pc bpc" id="L14" title="2 of 3 branches missed.">    return when (paymentSystem) {</span>
+<span class="fc bfc" id="L15" title="All 3 branches covered.">    return when (paymentSystem) {</span>
         MASTERCARD, MAESTRO -&gt; {
-<span class="pc bpc" id="L16" title="1 of 2 branches missed.">            if (transfersPerMonth &gt;= 75000_00u)</span>
-<span class="nc" id="L17">                20_00u + ceil(0.006 * amount.toDouble()).toUInt()</span>
-<span class="pc bpc" id="L18" title="1 of 2 branches missed.">            else if (transfersPerMonth + amount &gt; 75000_00u)</span>
-<span class="nc" id="L19">                20_00u + ceil(0.006 * (amount + transfersPerMonth - 75000_00u).toDouble()).toUInt()</span>
-<span class="fc" id="L20">            else 0u</span>
+<span class="fc bfc" id="L17" title="All 2 branches covered.">            if (transfersPerMonth &gt;= 75000_00u)</span>
+<span class="fc" id="L18">                20_00u + ceil(0.006 * amount.toDouble()).toUInt()</span>
+<span class="fc bfc" id="L19" title="All 2 branches covered.">            else if (transfersPerMonth + amount &gt; 75000_00u)</span>
+<span class="fc" id="L20">                20_00u + ceil(0.006 * (amount + transfersPerMonth - 75000_00u).toDouble()).toUInt()</span>
+<span class="fc" id="L21">            else 0u</span>
         }
-<span class="nc" id="L22">        VISA, MIR -&gt; max(ceil(0.0075 * amount.toDouble()).toUInt(), 35_00u)</span>
-<span class="nc" id="L23">        VK_PAY -&gt; 0U</span>
+<span class="fc" id="L23">        VISA, MIR -&gt; max(ceil(0.0075 * amount.toDouble()).toUInt(), 35_00u)</span>
+<span class="fc" id="L24">        VK_PAY -&gt; 0U</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

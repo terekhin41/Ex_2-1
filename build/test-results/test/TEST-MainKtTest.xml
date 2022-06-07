@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="MainKtTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2022-05-26T05:07:45" hostname="DESKTOP-CLEVO" time="0.012">
+<testsuite name="MainKtTest" tests="5" skipped="0" failures="1" errors="0" timestamp="2022-06-07T10:16:10" hostname="DESKTOP-CLEVO" time="0.019">
   <properties/>
-  <testcase name="feeCalculation_MasterCard" classname="MainKtTest" time="0.012">
+  <testcase name="feeCalculation_MasterCard_partialPrivilege" classname="MainKtTest" time="0.012"/>
+  <testcase name="feeCalculation_MasterCard_highTransfers" classname="MainKtTest" time="0.0"/>
+  <testcase name="feeCalculation_Visa" classname="MainKtTest" time="0.004"/>
+  <testcase name="feeCalculation_VkPay" classname="MainKtTest" time="0.001"/>
+  <testcase name="feeCalculation_MasterCard_lowTransfers" classname="MainKtTest" time="0.002">
     <failure message="junit.framework.AssertionFailedError: expected:&lt;Ошибочное значение&gt; but was:&lt;0&gt;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: expected:&lt;Ошибочное значение&gt; but was:&lt;0&gt;
 	at junit.framework.Assert.fail(Assert.java:57)
 	at junit.framework.Assert.failNotEquals(Assert.java:329)
 	at junit.framework.Assert.assertEquals(Assert.java:78)
 	at junit.framework.Assert.assertEquals(Assert.java:86)
 	at junit.framework.TestCase.assertEquals(TestCase.java:246)
-	at MainKtTest.feeCalculation_MasterCard(MainKtTest.kt:16)
+	at MainKtTest.feeCalculation_MasterCard_lowTransfers(MainKtTest.kt:16)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
